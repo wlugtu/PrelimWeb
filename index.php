@@ -44,7 +44,23 @@
         <button class="submit-btn" type="button" onclick="submitStudentInfo()">Submit Student Information</button>
     </div>
 </div>
-
+<div id="gradeForm" class="hidden">
+        <div class="form-title">Enter Grades for <span id="studentName"></span></div>
+        <div class="form-field">Prelim Grade</div>
+        <input type="number" class="grade-input" id="prelimGrade" min="0" max="100" step="1" oninput="computeAverage()" required>
+        
+        <div class="form-field">Midterm Grade</div>
+        <input type="number" class="grade-input" id="midtermGrade" min="0" max="100" step="1" oninput="computeAverage()" required>
+        
+        <div class="form-field">Finals Grade</div>
+        <input type="number" class="grade-input" id="finalsGrade" min="0" max="100" step="1" oninput="computeAverage()" required>
+        
+        <div class="form-field">Average Grade: <span id="averageGrade">N/A</span></div>
+        
+        <div class="form-field">
+            <button class="submit-btn" type="button" onclick="submitGrades()">Submit Grades</button>
+        </div>
+    </div>
     
 </body>
 </html>
